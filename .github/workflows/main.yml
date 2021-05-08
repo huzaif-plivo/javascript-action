@@ -36,9 +36,9 @@ jobs:
         uses: huzaif-plivo/action-sms@v1.0.0
         with:
           # Phone number in your Plivo account to send the SMS from
-          fromPhoneNumber: 919900383513
+          fromPhoneNumber: ${{ secrets.FROM }}
           # Phone number to send the SMS to
-          toPhoneNumber: 918050897600
+          toPhoneNumber: ${{ secrets.TO }}
           # The message you want to send
           message: Hey, there!
           # A Plivo auth_id. Can alternatively be stored in environment
