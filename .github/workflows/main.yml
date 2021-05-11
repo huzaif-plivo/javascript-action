@@ -31,7 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Plivo SMS
-        uses: huzaif-plivo/action-sms@v1.0
+        uses: huzaif-plivo/action-sms@v1.1
         with:
           # Phone number in your Plivo account to send the SMS from
           fromPhoneNumber: '15707126103'
