@@ -27,7 +27,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Plivo SMS
-        uses: huzaif-plivo/action-sms@v1.6
+        uses: huzaif-plivo/action-sms@v1.7
         with:
           # Phone number in your Plivo account to send the SMS from
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
