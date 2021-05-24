@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Send SMS
 
 # Controls when the action will run. 
 on:
@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Plivo SMS
-        uses: huzaif-plivo/action-sms@2.1
+        uses: huzaif-plivo/action-sms@2.2
         with:
           # Phone number in your Plivo account to send the SMS from
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
