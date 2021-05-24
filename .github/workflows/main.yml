@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Plivo SMS
-        uses: huzaif-plivo/action-sms@2.0
+        uses: huzaif-plivo/action-sms@2.1
         with:
           # Phone number in your Plivo account to send the SMS from
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
