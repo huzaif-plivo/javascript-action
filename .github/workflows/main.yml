@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Plivo Call
-        uses: huzaif-plivo/action-call@v1.3
+        uses: huzaif-plivo/action-call@v1.4
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
