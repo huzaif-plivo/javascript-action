@@ -24,10 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Plivo Call
-        uses: huzaif-plivo/action-call@v1.4
+        uses: huzaif-plivo/action-call@v1.5
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
+          message: 'There has been a new deployment for the ${{ github.repository }}'
         env:
           PLIVO_AUTH_ID: ${{ secrets.PLIVO_AUTH_ID }}
           PLIVO_AUTH_TOKEN: ${{ secrets.PLIVO_AUTH_TOKEN }}
