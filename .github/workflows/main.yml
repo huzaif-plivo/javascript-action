@@ -24,6 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
         if: ${{ failure() }}
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
