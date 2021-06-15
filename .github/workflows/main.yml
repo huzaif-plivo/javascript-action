@@ -24,10 +24,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.4
+        id: hello
         uses: actions/setup-python@v2
         with:
-          python-version: '3.4'
-        if: ${{ success() }}
+          python-version: '3.4'        
+        continue-on-error: true
+        if: steps.hello.outputs.status == 'failure'
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
         with:
