@@ -29,6 +29,7 @@ jobs:
         with:
           python-version: '3.4'        
         if: success()
+        continue-on-error: true
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
         with:
