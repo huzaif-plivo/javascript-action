@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
-        if: ${{ failure() }}
+        if: always()
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
