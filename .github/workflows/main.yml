@@ -29,13 +29,12 @@ jobs:
         with:
           python-version: '3.4'        
         continue-on-error: true
-        if: steps.hello.outputs.status == 'failure'
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
-          message: 'There has been a new deployment for the ${{ job.status }}'
+          message: 'steps.hello.outputs.status'
           language: 'en-US'
           voice: 'MAN'
         env:
