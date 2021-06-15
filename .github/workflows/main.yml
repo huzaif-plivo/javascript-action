@@ -26,8 +26,7 @@ jobs:
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
-          python-version: 2.7        
-        if: failure()
+          python-version: 2.7
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
         with:
