@@ -24,10 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.7
-        id: hello
         uses: actions/setup-python@v2
         with:
-          python-version: '3.7'        
+          python-version: 2.7        
         if: failure()
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
