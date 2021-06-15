@@ -34,7 +34,7 @@ jobs:
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
-          message: 'steps.hello.outputs.status'
+          message: steps.hello.outputs.status
           language: 'en-US'
           voice: 'MAN'
         env:
