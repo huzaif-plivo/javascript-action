@@ -29,7 +29,7 @@ jobs:
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
-          message: 'There has been a new deployment for the ${{ github.repository }}'
+          message: 'There has been a new deployment for the ${{ job.status }}'
           language: 'en-US'
           voice: 'MAN'
         env:
