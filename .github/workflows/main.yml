@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.4'        
-        continue-on-error: true
+        if: failure()
       - name: Plivo Call
         uses: huzaif-plivo/action-call@v1.6
         with:
