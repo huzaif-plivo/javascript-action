@@ -16,15 +16,14 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Make a Call:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Plivo Call
-        uses: huzaif-plivo/action-call@v1.5
-        if: always()
+        uses: huzaif-plivo/action-call@hello
         with:
           fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
           toPhoneNumber: ${{ secrets.TO_NUMBER }}
